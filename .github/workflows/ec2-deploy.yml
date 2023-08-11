@@ -57,4 +57,4 @@ jobs:
 
     - name: Run new container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@172.31.30.149 'sudo su && docker run -d --name cddemo -p 80:3000 vandai2995/cddemo:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-54-86-51-242.compute-1.amazonaws.com 'sudo su && docker run -d --name cddemo -p 80:3000 vandai2995/cddemo:latest'
