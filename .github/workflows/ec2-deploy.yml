@@ -48,12 +48,12 @@ jobs:
 
     - name: Pull Docker image
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@172.31.30.149 'sudo docker pull vandai2995/cddemo:latest'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-54-86-51-242.compute-1.amazonaws.com 'sudo docker pull vandai2995/cddemo:latest'
 
     - name: Stop running container
       run: |
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@172.31.30.149 'sudo docker stop cddemo || true'
-        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@172.31.30.149 'sudo docker rm cddemo || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-54-86-51-242.compute-1.amazonaws.com 'sudo docker stop cddemo || true'
+        ssh -o StrictHostKeyChecking=no -i key.pem ubuntu@ec2-54-86-51-242.compute-1.amazonaws.com 'sudo docker rm cddemo || true'
 
     - name: Run new container
       run: |
